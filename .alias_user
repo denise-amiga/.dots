@@ -1,0 +1,23 @@
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+alias -g L='| less'
+
+alias ls='ls --color=tty --group-directories-first'
+
+alias -s zip="unzip -l"
+alias -s rar="unrar l"
+alias -s tar="tar tf"
+alias -s tar.gz="echo "
+alias -s ace="unace l"
+
+function setgcc(){
+	if [[ $MSYSTEM == MINGW64 ]]; then
+		export MINGW=/d/_misrepos/bmxng/mingw32x64 ;
+		PATH=$PATH:$MINGW/bin ;
+	fi
+	if [[ $MSYSTEM == MINGW32 ]]; then
+		export MINGW=/d/_misrepos/bmxng/mingw32x86 ;
+		PATH=$PATH:$MINGW/bin ;
+	fi
+}
