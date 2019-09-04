@@ -1,7 +1,7 @@
 set -e
 
 m_gcc_ver="8.1.0"
-m_fbc_ver="1.07.0"
+m_fbc_ver="1.08.0"
 m_date=$(date +%F)
 
 usage(){
@@ -54,8 +54,9 @@ buildex32s(){
 	rm src/compiler/obj/win32/*.o
 	mkdir -p bin/win32 bin/libexec/gcc/$MINGW_CHOST/$m_gcc_ver
 	cp $MINGW/bin/{ar,as,ld,dlltool,gcc}.exe bin/win32
-	cp $MINGW/bin/libgcc_s_sjlj-1.dll bin/win32
+	cp $MINGW/bin/lib{gcc_s_sjlj-1,winpthread-1}.dll bin/win32
 	cp $MINGW/libexec/gcc/$MINGW_CHOST/$m_gcc_ver/cc1.exe bin/libexec/gcc/$MINGW_CHOST/$m_gcc_ver
+	cp $MINGW/bin/libwinpthread-1.dll bin/libexec/gcc/$MINGW_CHOST/$m_gcc_ver
 	cp $MINGW/$MINGW_CHOST/lib/{crt2,dllcrt2,gcrt2}.o lib/win32
 	cp $MINGW/$MINGW_CHOST/lib/lib{gmon,mingw32,mingwex,moldname}.a lib/win32
 	cp $MINGW/$MINGW_CHOST/lib/lib{advapi32,gdi32,kernel32,msvcrt,user32,winmm,winspool}.a lib/win32
@@ -113,8 +114,9 @@ buildex64s(){
 	rm src/compiler/obj/win64/*.o
 	mkdir -p bin/win64 bin/libexec/gcc/$MINGW_CHOST/$m_gcc_ver
 	cp $MINGW/bin/{ar,as,ld,dlltool,gcc}.exe bin/win64
-	cp $MINGW/bin/libgcc_s_seh-1.dll bin/win64
+	cp $MINGW/bin/lib{gcc_s_seh-1,winpthread-1}.dll bin/win64
 	cp $MINGW/libexec/gcc/$MINGW_CHOST/$m_gcc_ver/cc1.exe bin/libexec/gcc/$MINGW_CHOST/$m_gcc_ver
+	cp $MINGW/bin/libwinpthread-1.dll bin/libexec/gcc/$MINGW_CHOST/$m_gcc_ver
 	cp $MINGW/$MINGW_CHOST/lib/{crt2,dllcrt2,gcrt2}.o lib/win64
 	cp $MINGW/$MINGW_CHOST/lib/lib{gmon,mingw32,mingwex,moldname}.a lib/win64
 	cp $MINGW/$MINGW_CHOST/lib/lib{advapi32,gdi32,kernel32,msvcrt,user32,winmm,winspool}.a lib/win64
