@@ -10,6 +10,8 @@ usage(){
 	exit 1
 }
 
+[[ $# < 2 ]] && usage
+
 # parse command line arguments
 while [[ $# -gt 0 ]]
 do
@@ -20,23 +22,23 @@ do
 			shift
 			;;
 		--repo|-r)
-#			shift
-			m_repo="$2"
+			shift
+			m_repo="$1"
 			shift
 			;;
 		--author|-a)
-#			shift
-			m_author="$2"
+			shift
+			m_author="$1"
 			shift
 			;;
 		--branch|-b)
-#			shift
-			m_branch="$2"
+			shift
+			m_branch="$1"
 			shift
 			;;
 		--name|-n)
-#			shift
-			m_name="$2"
+			shift
+			m_name="$1"
 			shift
 			;;
 		--help|-h)
