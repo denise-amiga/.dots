@@ -4,7 +4,8 @@ alias -g G='| grep'
 alias -g L='| less'
 
 alias ls='ls --color=tty --group-directories-first'
-
+alias yt='youtube-dl -k -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+ 
 alias -s zip="unzip -l"
 alias -s rar="unrar l"
 alias -s tar="tar tf"
