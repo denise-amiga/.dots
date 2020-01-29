@@ -5,7 +5,7 @@ alias -g L='| less'
 
 alias ls='ls --color=tty --group-directories-first'
 alias yt='youtube-dl -k -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
- 
+
 alias -s zip="unzip -l"
 alias -s rar="unrar l"
 alias -s tar="tar tf"
@@ -14,11 +14,11 @@ alias -s ace="unace l"
 
 function setgcc(){
 	if [[ $MSYSTEM == MINGW64 ]]; then
-		export MINGW=/d/_misrepos/bmxng/mingw32x64 ;
+		export MINGW=/e/BmxNg/mingw64 ;
 		PATH=$PATH:$MINGW/bin ;
 	fi
 	if [[ $MSYSTEM == MINGW32 ]]; then
-		export MINGW=/d/_misrepos/bmxng/mingw32x86 ;
+		export MINGW=/e/BmxNg/mingw32 ;
 		PATH=$PATH:$MINGW/bin ;
 	fi
 }

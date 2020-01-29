@@ -78,7 +78,7 @@ if [[ "$m_sub" = "Y" ]]; then
 	git commit -m "Updated Submodules."
 else
 	git fetch upstream
-	#git checkout "$m_branch"
+	git checkout "$m_branch"
 	git merge upstream/"$m_branch"
 fi
 git push

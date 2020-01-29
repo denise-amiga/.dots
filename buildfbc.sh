@@ -157,7 +157,7 @@ build(){
 	fi
 }
 
-# paarse command line arguments
+# parse command line arguments
 while [[ $# -gt 0 ]]
 do
 	arg="$1"
