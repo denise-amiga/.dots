@@ -22,3 +22,7 @@ function setgcc(){
 		PATH=$PATH:$MINGW/bin ;
 	fi
 }
+
+function gitaddsub(){
+	git submodule add https://github.com/"$1"/"$2".git "$2"
+}

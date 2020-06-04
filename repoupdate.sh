@@ -81,4 +81,4 @@ else
 	git checkout "$m_branch"
 	git merge upstream/"$m_branch"
 fi
-git push
+git push origin "$m_branch" --tags
