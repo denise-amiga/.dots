@@ -23,6 +23,27 @@ function setgcc(){
 	fi
 }
 
-function gitaddsub(){
+## $1=dir/author
+function gitsubmodinit(){
+	if [[ ! -d ~/_misrepos ]]; then
+		mkdir ~/_misrepos
+	fi
+	cd ~/_misrepos
+	mkdir "$1"
+	cd "$1"
+	git init
+}
+
+## $1=dir/author $2=repo
+function gitsubmodadd(){
+	cd ~/_misrepos/"$1"
 	git submodule add https://github.com/"$1"/"$2".git "$2"
+}
+
+## $1=dir/author
+function gitsubmodend(){
+	cd ~/_misrepos/"$1"
+	git commit -m "Updated submodules."
+	git remote add origin git@github.com:denise-amiga/"$1".git
+	git push -u origin master
 }
