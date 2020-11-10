@@ -1,0 +1,31 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry 'Manjaro Linux (Shell)' --class manjaro --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-3454cf51-53e0-45bc-9703-b49bc3d0fc29' {
+	savedefault
+	load_video
+	set gfxpayload=keep
+	insmod gzio
+	insmod part_gpt
+	insmod ext2
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root  3454cf51-53e0-45bc-9703-b49bc3d0fc29
+	else
+	  search --no-floppy --fs-uuid --set=root 3454cf51-53e0-45bc-9703-b49bc3d0fc29
+	fi
+	linux	/boot/vmlinuz-5.7-x86_64 root=UUID=3454cf51-53e0-45bc-9703-b49bc3d0fc29 rw  quiet apparmor=1 security=apparmor udev.log_priority=3 3
+	initrd	/boot/intel-ucode.img /boot/initramfs-5.7-x86_64.img
+}
+
+menuentry "System shutdown" {
+    echo "System shutting down..."
+    halt
+}
+
+menuentry "System restart" {
+    echo "System rebooting..."
+    reboot
+}
