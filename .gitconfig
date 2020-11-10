@@ -1,0 +1,12 @@
+[user]
+	name = Denise Amiga
+	email = denise_amiga@hotmail.com
+[color]
+	ui = true
+[core]
+	autocrlf = true
+	editor = code --wait
+[pull]
+	rebase = false
+[checkout]
+	defaultRemote = origin
