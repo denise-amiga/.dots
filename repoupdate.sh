@@ -4,7 +4,7 @@ set -e
 
 # personal settings
 _MYREPO_="git@github.com:denise-amiga"
-_MYPATH_="~/_misrepos"
+_MYPATH_="$HOME/_misrepos"
 
 # default options
 m_branch="master"
