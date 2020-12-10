@@ -1,0 +1,45 @@
+##
+## Cmnd alias specification
+##
+Cmnd_Alias  POWER       =   /usr/bin/shutdown -h now, /usr/bin/halt, /usr/bin/poweroff, /usr/bin/reboot
+Cmnd_Alias  STORAGE     =   /usr/bin/mount -o nosuid\,nodev\,noexec, /usr/bin/umount
+Cmnd_Alias  SYSTEMD     =   /usr/bin/journalctl, /usr/bin/systemctl
+Cmnd_Alias  KILL        =   /usr/bin/kill, /usr/bin/killall
+Cmnd_Alias  PKGMAN      =   /usr/bin/pacman, /usr/bin/paccache
+Cmnd_Alias  NETWORK     =   /usr/bin/netctl
+Cmnd_Alias  FIREWALL    =   /usr/bin/iptables, /usr/bin/ip6tables
+Cmnd_Alias  SHELL       =   /usr/bin/zsh, /usr/bin/bash
+Cmnd_Alias  SPACEUTIL   =   /usr/bin/df, /usr/bin/du
+
+##
+## Locale settings
+Defaults    env_keep    +=  "LANG LANGUAGE LINGUAS LC_* _XKB_CHARSET"
+
+##
+## Run X applications through sudo; HOME is used to find the
+## .Xauthority file.  Note that other programs use HOME to find   
+## configuration files and this may lead to privilege escalation!
+Defaults    env_keep    +=  "HOME"
+
+##
+## X11 resource path settings
+Defaults    env_keep    +=  "XAPPLRESDIR XFILESEARCHPATH XUSERFILESEARCHPATH"
+
+##
+## Desktop path settings
+Defaults    env_keep    +=  "QTDIR KDEDIR"
+
+##
+## Allow sudo-run commands to inherit the callers' ConsoleKit session
+Defaults    env_keep    +=  "XDG_SESSION_COOKIE"
+
+##
+## Uncomment to enable special input methods.  Care should be taken as
+## this may allow users to subvert the command being run via sudo.
+Defaults    env_keep    +=  "XMODIFIERS GTK_IM_MODULE QT_IM_MODULE QT_IM_SWITCHER"
+
+##
+## User privilege specification
+##
+root        ALL         =   (ALL)   ALL
+denise      ALL         =   (root)  NOPASSWD: POWER, STORAGE, SYSTEMD, KILL, PKGMAN, NETWORK, FIREWALL, SHELL, SPACEUTIL
