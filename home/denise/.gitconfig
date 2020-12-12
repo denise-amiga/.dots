@@ -1,12 +1,17 @@
 [user]
 	name = Denise Amiga
 	email = denise_amiga@hotmail.com
+	signingKey = E57AA96F26EF18779D53DF576D516010E6663122
 [color]
 	ui = true
 [core]
-	autocrlf = true
+	autocrlf = false
 	editor = code --wait
 [pull]
 	rebase = false
 [checkout]
 	defaultRemote = origin
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
