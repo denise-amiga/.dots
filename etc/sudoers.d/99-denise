@@ -9,7 +9,7 @@ Cmnd_Alias  PKGMAN      =   /usr/bin/pacman, /usr/bin/paccache
 Cmnd_Alias  NETWORK     =   /usr/bin/netctl
 Cmnd_Alias  FIREWALL    =   /usr/bin/iptables, /usr/bin/ip6tables
 Cmnd_Alias  SHELL       =   /usr/bin/zsh, /usr/bin/bash
-Cmnd_Alias  SPACEUTIL   =   /usr/bin/df, /usr/bin/du
+Cmnd_Alias  DENISEUTIL  =   /usr/bin/df, /usr/bin/du, /usr/bin/updatedb
 
 ##
 ## Locale settings
@@ -42,4 +42,4 @@ Defaults    env_keep    +=  "XMODIFIERS GTK_IM_MODULE QT_IM_MODULE QT_IM_SWITCHE
 ## User privilege specification
 ##
 root        ALL         =   (ALL)   ALL
-denise      ALL         =   (root)  NOPASSWD: POWER, STORAGE, SYSTEMD, KILL, PKGMAN, NETWORK, FIREWALL, SHELL, SPACEUTIL
+denise      ALL         =   (root)  NOPASSWD: POWER, STORAGE, SYSTEMD, KILL, PKGMAN, NETWORK, FIREWALL, SHELL, DENISEUTIL
