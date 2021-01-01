@@ -5,8 +5,8 @@
 [color]
 	ui = true
 [core]
-	autocrlf = false
-	editor = code --wait
+	autocrlf = input
+	editor = subl -n -w
 [pull]
 	rebase = false
 [checkout]
