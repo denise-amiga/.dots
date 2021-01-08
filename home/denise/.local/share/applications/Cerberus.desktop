@@ -1,0 +1,10 @@
+[Desktop Entry]
+Comment=Cerberus IDE
+Terminal=false
+Name=Cerberus
+Type=Application
+MimeType=text/cerberus
+Categories=Development;
+StartupNotify=true
+Exec=/home/denise/DevTools/Cerberus/Cerberus
+Icon=/home/denise/DevTools/Cerberus/docs/html/data/cerberusx.png
