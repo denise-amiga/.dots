@@ -1,0 +1,10 @@
+[Desktop Entry]
+Comment=BlitzMax IDE
+Terminal=false
+Name=BlitzMax
+Type=Application
+MimeType=text/blitzmax
+Categories=Development;
+StartupNotify=true
+Exec=/home/denise/DevTools/BlitzMax/MaxIDE
+Icon=/home/denise/DevTools/BlitzMax/docs/html/bmax120.png

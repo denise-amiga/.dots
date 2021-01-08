@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+   <mime-type type="text/purebasic">
+      <comment>PureBasic source code</comment>
+      <glob pattern="*.pb"/>
+      <glob pattern="*.pbi"/>
+      <glob pattern="*.pbf"/>
+   </mime-type>
+</mime-info>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Comment=PureBasic IDE
+Terminal=false
+Name=PureBasic
+Type=Application
+MimeType=text/purebasic
+Categories=Development;
+StartupNotify=true
+Exec=/home/denise/DevTools/PureBasic/compilers/purebasic
+Icon=/home/denise/DevTools/PureBasic/logo.png
