@@ -1,0 +1,12 @@
+{
+	"font_size": 12,
+    "draw_minimap_border": true,
+    "always_show_minimap_viewport": true,
+    "highlight_line": true,
+    "block_caret": true,
+    "match_brackets_angle": true,
+    "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
+    "show_encoding": true,
+    "show_line_endings": true
+}
